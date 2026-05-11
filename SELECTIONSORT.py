@@ -1,0 +1,66 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNogjRHAAzeP4vi344rvYPt",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Amaan11205/PRACS/blob/main/SELECTIONSORT.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AOyunP_-gbbM",
+        "outputId": "61456a37-24a6-45fc-cb41-431bebba1936"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "sorted array\n",
+            "1 44 56 64 82 "
+          ]
+        }
+      ],
+      "source": [
+        "arr = [64, 44, 1 , 56 , 82]\n",
+        "n = len(arr)\n",
+        "for i in range(n):\n",
+        "  min_index = i\n",
+        "  for j in range(i+1,n):\n",
+        "    if arr[j]<arr[min_index]:\n",
+        "      min_index=j\n",
+        "  arr[i],arr[min_index] = arr[min_index],arr[i]\n",
+        "print(\"sorted array\")\n",
+        "\n",
+        "for i in arr:\n",
+        "  print(i , end=\" \")\n",
+        "\n"
+      ]
+    }
+  ]
+}
